@@ -9,15 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "^14.1.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "typescript": "^5.3.3",
-    "@supabase/supabase-js": "^2.39.3",
-    "stripe": "^14.13.0",
-    "puppeteer-core": "^21.9.0",
     "@sparticuz/chromium": "^121.0.0",
+    "@supabase/supabase-js": "^2.39.3",
     "nanoid": "^5.0.4",
+    "next": "^16.1.6",
+    "puppeteer-core": "^24.37.2",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "stripe": "^14.13.0",
+    "typescript": "^5.3.3",
     "zod": "^3.22.4"
   },
   "devDependencies": {
@@ -25,9 +25,9 @@
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
     "autoprefixer": "^10.4.17",
-    "postcss": "^8.4.33",
-    "tailwindcss": "^3.4.1",
     "eslint": "^8.56.0",
-    "eslint-config-next": "^14.1.0"
+    "eslint-config-next": "^16.1.6",
+    "postcss": "^8.4.33",
+    "tailwindcss": "^3.4.1"
   }
 }
