@@ -5,8 +5,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-    title: 'PdfForge - Professional PDF Generation API',
-    description: 'Convert HTML and URLs to high-quality PDFs with our simple API',
+    title: 'SnapAPI - Screenshot Generation Service',
+    description: 'Capture any webpage as a high-quality image with our simple API',
 }
 
 export default function RootLayout({
