@@ -9,7 +9,7 @@ export default function Dashboard() {
                     <h2 className="text-2xl font-semibold mb-4">Your API Key</h2>
                     <p className="text-gray-600 mb-3">Use this key to authenticate your API requests</p>
                     <div className="bg-gray-100 p-4 rounded font-mono text-sm flex items-center justify-between">
-                        <span>sk_test_4eC39HqLyjWDarjtT1zdp7dc</span>
+                        <span>sk_test_xxxxxxxxxxxxxxxxxxxxxxxx</span>
                         <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 text-xs">
                             Copy
                         </button>
