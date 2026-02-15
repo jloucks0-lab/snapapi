@@ -1,22 +1,36 @@
+'use client'
+
+import { useState } from 'react'
+
 export default function Dashboard() {
+    const [copied, setCopied] = useState(false)
+    const apiKey = 'sk_test_xxxxxxxxxxxxxxxxxxxx'
+
+    const handleCopy = () => {
+        navigator.clipboard.writeText(apiKey)
+        setCopied(true)
+        setTimeout(() => setCopied(false), 2000)
+    }
+
     return (
         <div className="min-h-screen bg-gray-50 py-8">
             <div className="container mx-auto px-4 max-w-6xl">
                 <h1 className="text-4xl font-bold mb-8">Dashboard</h1>
 
-                {/* API Key Section */}
                 <div className="bg-white p-6 rounded-lg shadow-md mb-6">
                     <h2 className="text-2xl font-semibold mb-4">Your API Key</h2>
                     <p className="text-gray-600 mb-3">Use this key to authenticate your API requests</p>
                     <div className="bg-gray-100 p-4 rounded font-mono text-sm flex items-center justify-between">
-                        <span>sk_test_xxxxxxxxxxxxxxxxxxxxxxxx</span>
-                        <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 text-xs">
-                            Copy
+                        <span>{apiKey}</span>
+                        <button
+                            onClick={handleCopy}
+                            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 text-xs transition"
+                        >
+                            {copied ? 'Copied!' : 'Copy'}
                         </button>
                     </div>
                 </div>
 
-                {/* Usage Stats */}
                 <div className="grid md:grid-cols-3 gap-6 mb-6">
                     <div className="bg-white p-6 rounded-lg shadow-md">
                         <h3 className="text-lg font-semibold mb-2 text-gray-700">This Month</h3>
@@ -35,7 +49,6 @@ export default function Dashboard() {
                     </div>
                 </div>
 
-                {/* Current Plan */}
                 <div className="bg-white p-6 rounded-lg shadow-md mb-6">
                     <h2 className="text-2xl font-semibold mb-4">Current Plan</h2>
                     <div className="flex items-center justify-between">
@@ -49,7 +62,6 @@ export default function Dashboard() {
                     </div>
                 </div>
 
-                {/* Recent Activity */}
                 <div className="bg-white p-6 rounded-lg shadow-md">
                     <h2 className="text-2xl font-semibold mb-4">Recent Activity</h2>
                     <div className="space-y-3">
